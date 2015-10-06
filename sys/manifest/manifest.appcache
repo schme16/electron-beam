@@ -1,0 +1,36 @@
+CACHE MANIFEST
+
+#version 1.0 12-10-2014
+
+CACHE:
+
+#fonts
+sys/css/fonts/Regular/OpenSans-Regular.woff
+
+
+#internal HTML documents
+
+
+#style sheets
+sys/css/bootstrap.min.css
+sys/css/open-sans.css
+sys/css/styles.css
+
+#style sheet images
+
+
+#javascript files
+sys/js/jquery.min.js
+sys/js/angular.min.js
+sys/js/jsCommons.min.js
+sys/js/modernizr.min.js
+sys/js/pointerevents.min.js
+sys/js/Scope.SafeApply.min.js
+sys/js/sugar.min.js
+sys/js/ui-bootstrap-tpls.min.js
+sys/js/velocity.min.js
+sys/js/velocity.ui.min.js
+sys/js/main.js
+
+NETWORK:
+*

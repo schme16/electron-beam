@@ -1,0 +1,44 @@
+ /*
+		__  _______ ____      ____  ___   _____ ______
+	   / / / / ___// __ \    / __ )/   | / ___// ____/
+	  / / / /\__ \/ / / /   / __  / /| | \__ \/ __/
+	 / /_/ /___/ / /_/ /   / /_/ / ___ |___/ / /___
+	 \____//____/\___\_\  /_____/_/  |_/____/_____/
+
+		_____________  ____    ___________
+	   / ___/_  __/\ \/ / /   / ____/ ___/
+	   \__ \ / /    \  / /   / __/  \__ \
+	  ___/ // /     / / /___/ /___ ___/ /
+	 /____//_/     /_/_____/_____//____/
+
+
+{
+	"Job Number": "2015-1510",
+	"Job Name": "M - ENRICH GOAL: JAVASCRIPT SERVER SIDE RESEARCH",
+	"Developer": "Shane Gadsby",
+	"Client": "Cindy Laine",
+	"Course": "n/a",
+	"Department": ""
+}
+
+*/
+
+
+
+
+
+
+html,
+body{
+	background: #fff;
+	color: #1e1e1e;
+	font-size: 14px;
+	font-family: 'Open Sans', 'Arial', sans-serif;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
