@@ -191,6 +191,8 @@ server.listen(port, null, function () {
         })
 
         mainWindow.loadUrl('http://127.0.0.1:59991', null, function() {})
+
+
         /*
 
             updater.on('updateRequired', function () {        
