@@ -1,0 +1,22 @@
+{
+  "name": "electron-beam",
+  "version": "1.0.0",
+  "description": "A graphical NodeJS webserver built on electron",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm start"
+  },
+  "author": "Shane Gadsby <schme16@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "compression": "^1.6.0",
+    "cors": "^2.7.1",
+    "electron-plugins": "0.0.4",
+    "electron-updater": "^0.2.2",
+    "express": "^4.13.3",
+    "express-directory": "0.0.2",
+    "express-static": "^1.0.3",
+    "serve-index": "^1.7.2",
+    "socket.io": "^1.3.7"
+  }
+}

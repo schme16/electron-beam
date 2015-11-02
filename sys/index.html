@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html off-manifest="manifest.appcache" ng-app="2015-1510 - M - ENRICH GOAL: JAVASCRIPT SERVER SIDE RESEARCH">
+
+<head>
+
+	<!--Sets the text encoding-->
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+	<!--Sets the Viewport properties-->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.2, minimum-scale=1.0, user-scalable=no">
+
+
+	<!--Start Stylesheets-->
+		<link rel="stylesheet" type="text/css" href="bower_components/open-sans/css/open-sans.min.css" >
+		<link rel="stylesheet" type="text/css" href="bower_components/font-awesome/css/font-awesome.min.css" >
+		<link rel="stylesheet" type="text/css" href="css/styles.css">
+
+
+	<!--Start Scripts-->
+		<script src="bower_components/jquery/dist/jquery.min.js"></script>
+		<script src="bower_components/angular/angular.min.js"></script>
+		<script src="socket.io/socket.io.js"></script>
+
+<script type="text/javascript">
+require('ipc').on('send-console', function(msg) {
+    console.log(msg);
+});
+</script>
+
+
+	<!--The title-->
+	<title>electron Beam</title>
+	<!--For information about this job, please see: `sys/css/styles.css`-->
+
+
+</head>
+<body ng-controller="master">
+	<header>
+		<div class="icon"></div>
+		<div class="close-button" ng-click="minimize()"><span class="fa fa-close"></span></div>
+	</header>
+
+	<div class="page" ng-cloak>
+		<div class="loading-servers-message" ng-show="!!loading"><img src="img/icons/687474703a2f2f692e696d6775722e636f6d2f4453487a6e73472e676966.gif"></div>
+		<div class="no-smenuervers-message" ng-show="(!servers || !server.length == 0) && !loading">No servers added yet</div>
+		<div class="server-row-spacer" ng-repeat="(key,server) in servers">
+			<div class="server-row">
+				{{server.title}}
+				<div class="fa fa-edit server-indicator edit" ng-click="$parent.serverItem = server"></div>
+				<div class="fa fa-trash-o server-indicator destroy" ng-click="destroy(server)"></div>
+				<div class="fa server-indicator stopstart" ng-class="{'up': server.up, 'fa-stop': server.up, 'down': !server.up, 'fa-play': !server.up}" ng-click="toggle(server)"></div>
+			</div>
+		</div>
+	</div>
+
+	<div class="server-editor" ng-class="{'show-editor': !!serverItem}">
+		<label for="title">Title:</label>
+		<input id="title" ng-model="serverItem.title">
+		<br>
+
+		<label for="port">Port:</label>
+		<input type="number" id="port" ng-model="serverItem.port">
+		<br>
+
+		<label for="directory">Directory:</label>
+		<input onfocus=" m.serverItem.directory = m.pickDirectory() || this.value || ''; this.blur(); m.$applyAsync()" id="directory" ng-model="serverItem.directory">
+		<br>
+
+		<button ng-show="!serverItem.new" ng-click="save(serverItem); serverItem = null">Save</button>
+		<button ng-show="!!serverItem.new" ng-click="create(serverItem); serverItem = null">Start</button>
+
+		<div class="fa fa-close close-edit-window-button" ng-click="serverItem = null"></div>
+
+	</div>
+
+	<div class="fa fa-plus add-button" ng-show="!loading" ng-click="serverItem = {new:true}"></div>
+	
+	<!--Initialize the app-->
+	<script src="js/main.js"></script>
+</body>
+</html>

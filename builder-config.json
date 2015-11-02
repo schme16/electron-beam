@@ -1,0 +1,6 @@
+{
+  "win" : {
+    "title" : "electron Beam",
+    "icon" : "apple-touch-icon.ico"
+  }
+}
